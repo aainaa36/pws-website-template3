@@ -370,3 +370,4 @@ footer .foot-grid a:not(.logo):hover{color:#fff}
 footer .foot-grid div p{margin-top:0;margin-bottom:8px}
 footer .foot-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2f3b42;padding-top:20px;padding-bottom:24px;color:var(--l-grey);font-size:13px}
 @media (max-width:800px){footer .foot-grid{grid-template-columns:1fr;gap:28px}}
+.hero-art video,.hero-art img{width:100%;height:auto;display:block;border-radius:4px}
