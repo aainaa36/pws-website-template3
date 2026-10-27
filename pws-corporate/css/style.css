@@ -390,7 +390,7 @@ body{color:#2d2c27}
 .hero p{color:#3b3a33}
 .hero .btn-primary{background:var(--orange);color:var(--black)}
 .hero .btn-primary:hover{background:var(--orange-d)}
-.status{background:#fff;color:var(--shade-3);border:1px solid rgba(23,145,58,.35)}
+.status{background:var(--yellow);color:var(--black);border:1px solid rgba(0,0,0,.15)}
 .hero-art{background:var(--primary);border:0;box-shadow:0 20px 40px rgba(0,0,0,.2);padding:8px;border-radius:8px}
 .hero .facts{border-top:1px solid rgba(0,0,0,.18)}
 .facts b{color:var(--black)}
