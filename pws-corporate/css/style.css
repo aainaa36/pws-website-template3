@@ -401,7 +401,7 @@ body{color:#2A2116}
 .hero h1{color:var(--black)}
 .hero h1 .green{color:#C25A00}
 .hero p{color:#4A3F2E}
-.status{background:var(--yellow);color:var(--black);border:1px solid rgba(0,0,0,.15)}
+.status{background:#fff;color:var(--black);border:1px solid rgba(0,0,0,.15)}
 .hero-art{background:var(--orange);border:0;box-shadow:0 20px 40px rgba(0,0,0,.2);padding:8px;border-radius:8px}
 .hero .facts{border-top:1px solid rgba(0,0,0,.18)}
 .facts b{color:var(--black)}
