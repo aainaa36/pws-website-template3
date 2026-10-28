@@ -372,72 +372,85 @@ footer .foot-bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:w
 @media (max-width:800px){footer .foot-grid{grid-template-columns:1fr;gap:28px}}
 .hero-art video,.hero-art img{width:100%;height:auto;display:block;border-radius:4px}
 
-/* ======== BRIGHT THEME: yellow, green, orange (replaces the blue-grey look) ======== */
+/* ======== EARTH THEME: terracotta orange, sage blue-grey, khaki (from reference image) ======== */
 :root{
-  --black:#24231f; --d-grey:#4a4944; --grey:#6b6a60; --l-grey:#9a9889; --grey-blue:#cfcdbf; --silver:#FAF7EA;
-  --primary:#2BB84C; --shade-2:#17913A; --shade-3:#0F7A2C; --shade-4:#0A5F21;
-  --tint-1:#47C762; --tint-2:#6FD483; --tint-3:#A3E4AE; --tint-4:#CDF0D3; --tint-5:#EAF9EC;
-  --orange:#FF9A1F; --orange-d:#F58300; --yellow:#FFC21A; --line:#EFE9D2;
+  --black:#2B3432; --d-grey:#46504D; --grey:#5E6764; --l-grey:#97A19D; --grey-blue:#C5D0CC; --silver:#F6F2E6;
+  --primary:#BC6130; --shade-2:#A9552A; --shade-3:#8F4520; --shade-4:#6F3417;
+  --tint-1:#D2834F; --tint-2:#DE9A6B; --tint-3:#E8B792; --tint-4:#F3D6C0; --tint-5:#FBEFE6;
+  --orange:#D98A4E; --orange-d:#B5602A; --yellow:#CDBF8F; --line:#E4DDC6;
+  --sage:#8FA9A3; --sage-d:#5E827B; --khaki-d:#9C8A4E;
 }
-body{color:#2d2c27}
-.nav{border-bottom:3px solid var(--yellow)}
+body{color:#2B3432}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(188,97,48,.5)}100%{box-shadow:0 0 0 10px rgba(188,97,48,0)}}
+
+/* logo icon (overrides the green fills inside the SVG) */
+.logo svg path:nth-child(1){fill:#8F4520}
+.logo svg path:nth-child(2){fill:#BC6130}
+
+/* nav */
+.nav{border-bottom:3px solid var(--primary)}
 .nav ul a[aria-current="page"]{color:var(--shade-3)}
 
-/* hero: sunny yellow into fresh green */
-.hero{background:linear-gradient(120deg,#FFF0A8 0%,#FFD84D 40%,#7FD957 100%)}
+/* hero: warm khaki fading into sage */
+.hero{background:linear-gradient(120deg,#EFE8CC 0%,#D9D6B8 35%,#A9C2BC 100%)}
 .hero h1{color:var(--black)}
-.hero h1 .green{color:#0B6B22}
-.hero p{color:#3b3a33}
-.hero .btn-primary{background:var(--orange);color:var(--black)}
-.hero .btn-primary:hover{background:var(--orange-d)}
-.status{background:var(--yellow);color:var(--black);border:1px solid rgba(0,0,0,.15)}
-.hero-art{background:var(--primary);border:0;box-shadow:0 20px 40px rgba(0,0,0,.2);padding:8px;border-radius:8px}
-.hero .facts{border-top:1px solid rgba(0,0,0,.18)}
-.facts b{color:var(--black)}
-.facts span{color:#4a493f}
+.hero h1 .green{color:var(--shade-3)}
+.hero p{color:#3E4845}
+.hero .btn-primary{background:var(--shade-2);color:#fff}
+.hero .btn-primary:hover{background:var(--shade-3)}
+.btn-primary{background:var(--shade-2);color:#fff}
+.btn-primary:hover{background:var(--shade-3)}
+.status{background:#D9CFA6;color:var(--black);border:1px solid rgba(43,52,50,.2)}
+.hero-art{background:var(--primary)}
+.hero .facts{border-top:1px solid rgba(43,52,50,.2)}
+.facts span{color:#46504D}
 
-/* services: green, orange and yellow accents */
-.audience .grid-3,.aud-card{border-color:var(--line)}
-.aud-card{position:relative}
-.aud-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--primary)}
-.aud-card:nth-child(2)::before{background:var(--orange)}
+/* service cards: terracotta, sage, khaki */
+.aud-card::before{background:var(--primary)}
+.aud-card:nth-child(2)::before{background:var(--sage)}
 .aud-card:nth-child(3)::before{background:var(--yellow)}
-.aud-card:nth-child(2) .icon-bubble{color:var(--orange-d)}
-.aud-card:nth-child(3) .icon-bubble{color:#D99A00}
+.aud-card:nth-child(1) .icon-bubble{color:var(--primary)}
+.aud-card:nth-child(2) .icon-bubble{color:var(--sage-d)}
+.aud-card:nth-child(3) .icon-bubble{color:var(--khaki-d)}
+.aud-card:nth-child(1) .points li::marker{color:var(--primary)}
+.aud-card:nth-child(2) .points li::marker{color:var(--sage-d)}
+.aud-card:nth-child(3) .points li::marker{color:var(--khaki-d)}
+.aud-card:hover{background:var(--silver)}
 
-/* dark panels: warm charcoal with coloured bars */
-.art.panel{background:var(--black);border-color:#3d3b33}
-.panel-head{border-bottom-color:#3d3b33}
-.bar{background:#3d3b33}
-.bar-row:nth-child(3n+1) .bar i{background:var(--primary)}
-.bar-row:nth-child(3n+2) .bar i{background:var(--yellow)}
-.bar-row:nth-child(3n) .bar i{background:var(--orange)}
-.log li{border-bottom-color:#3d3b33}
+/* dark panels */
+.art.panel{background:var(--black);border-color:#46504D}
+.panel-head,.log li{border-bottom-color:#46504D}
+.bar{background:#46504D}
+.bar-row:nth-child(3n+1) .bar i{background:var(--tint-1)}
+.bar-row:nth-child(3n+2) .bar i{background:var(--sage)}
+.bar-row:nth-child(3n) .bar i{background:var(--yellow)}
+.log b{color:#A9C4BE}
+.log b.deny{color:#ef9a7a}
 
-/* stats: coloured rules */
+/* stats */
 .stats{border-color:var(--line)}
-.stat{border-left:4px solid var(--primary);padding-left:20px}
-.stat:nth-child(2){border-left-color:var(--yellow)}
-.stat:nth-child(3){border-left-color:var(--orange)}
+.stat{border-left:4px solid var(--primary)}
+.stat:nth-child(2){border-left-color:var(--sage)}
+.stat:nth-child(3){border-left-color:var(--yellow)}
+.stat:nth-child(4){border-left-color:var(--tint-3)}
 
-/* call to action band */
-.cta{background:linear-gradient(120deg,#FFF0A8,#FFD84D)}
-.cta .muted{color:#4a493f}
-
-/* connect page */
-.page-head{background:linear-gradient(120deg,#FFF0A8 0%,#FFD84D 45%,#7FD957 100%)}
+/* call to action + connect page */
+.cta{background:linear-gradient(120deg,#EFE8CC,#C9D6D1)}
+.cta .muted{color:#46504D}
+.page-head{background:linear-gradient(120deg,#EFE8CC 0%,#D9D6B8 40%,#A9C2BC 100%)}
 .page-head h1{color:var(--black)}
-.page-head p{color:#3b3a33}
+.page-head p{color:#3E4845}
 .info-card{border-color:var(--line)}
-.field input,.field select,.connect textarea{border-color:#D9D4BF}
+.field input,.field select,.connect textarea{border-color:#CFC8AE}
+.field input:focus,.field select:focus,.connect textarea:focus{outline-color:var(--primary);border-color:var(--primary)}
 
 /* footer */
 footer{background:var(--black)}
-footer p{color:#b9b6a4}
+footer p{color:#B7C2BE}
 footer h5{color:var(--yellow)}
-footer .foot-grid a:not(.logo){color:#d9d5c0}
+footer .foot-grid a:not(.logo){color:#D5DCD8}
 footer .foot-grid a:not(.logo):hover{color:var(--yellow)}
-footer .foot-bar{border-top-color:#3d3b33;color:#9a9889}
+footer .foot-bar{border-top-color:#46504D;color:#97A19D}
 .hero-art video,.hero-art img{width:100%;height:auto;display:block;border-radius:4px}
 .aud-card .points{
   list-style:disc;
