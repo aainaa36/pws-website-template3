@@ -480,3 +480,4 @@ footer .foot-bar{border-top-color:#46504D;color:#97A19D}
   line-height:1.9;
 }
 .aud-card .points li::marker{color:var(--primary)}
+.art img{width:100%;height:100%;object-fit:cover;border-radius:8px;display:block}
