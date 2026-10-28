@@ -450,12 +450,12 @@ body{color:#2A2116}
 .field input:focus,.field select:focus,.connect textarea:focus{outline-color:var(--orange);border-color:var(--orange)}
  
 /* footer */
-footer{background:var(--black)}
-footer p{color:#CFC4A8}
+footer{background:#111111}
+footer p{color:#C8C8C8}
 footer h5{color:var(--yellow)}
 footer .foot-grid a:not(.logo){color:#E6DCC0}
 footer .foot-grid a:not(.logo):hover{color:var(--yellow)}
-footer .foot-bar{border-top-color:#4A3F2E;color:#A39880}
+footer .foot-bar{border-top-color:#333333;color:#9A9A9A}
 .page-head h1{color:var(--black)}
 .page-head p{color:#3E4845}
 .info-card{border-color:var(--line)}
