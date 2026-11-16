@@ -397,7 +397,7 @@ body{color:#2A2116}
 .nav .btn-primary{color:var(--black)!important}
  
 /* hero: sunny yellow into orange */
-.hero{background:linear-gradient(135deg,#FFFBEA 0%,#FFF2C4 30%,#FFE28F 60%,#FFCB55 85%,#FFB347 100%)}
+.hero{background:linear-gradient(135deg,#FFFBEA 0%,#FFF2C4 30%,#FFE28F 60%,#FFCB55 85%,#FFC869 100%)}
 .hero h1{color:var(--black)}
 .hero h1 .green{color:#C25A00}
 .hero p{color:#4A3F2E}
@@ -440,9 +440,9 @@ body{color:#2A2116}
 .stats h4 span{color:var(--shade-3)}
  
 /* call to action + connect page */
-.cta{background:linear-gradient(135deg,#FFFBEA 0%,#FFF2C4 30%,#FFE28F 60%,#FFCB55 85%,#FFB347 100%)}
+.cta{background:linear-gradient(135deg,#FFFBEA 0%,#FFF2C4 30%,#FFE28F 60%,#FFCB55 85%,#FFC869 100%)}
 .cta .muted{color:#4A3F2E}
-.page-head{background:linear-gradient(135deg,#FFFBEA 0%,#FFF2C4 30%,#FFE28F 60%,#FFCB55 85%,#FFB347 100%)}
+.page-head{background:linear-gradient(135deg,#FFFBEA 0%,#FFF2C4 30%,#FFE28F 60%,#FFCB55 85%,#FFC869 100%)}
 .page-head h1{color:var(--black)}
 .page-head p{color:#4A3F2E}
 .info-card{border-color:var(--line)}
