@@ -397,7 +397,7 @@ body{color:#2A2116}
 .nav .btn-primary{color:var(--black)!important}
  
 /* hero: sunny yellow into orange */
-.hero{background:linear-gradient(120deg,#FFF3B0 0%,#FFD23F 45%,#FFA726 100%)}
+.hero{background:linear-gradient(120deg,#FFFBEA 0%,#FFF3CC 55%,#FFE4B0 100%)}
 .hero h1{color:var(--black)}
 .hero h1 .green{color:#C25A00}
 .hero p{color:#4A3F2E}
