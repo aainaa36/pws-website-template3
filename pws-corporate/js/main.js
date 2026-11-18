@@ -50,9 +50,12 @@ if (form) {
     const okName = setErr('name', document.getElementById('name').value.trim() ? '' : 'Enter your name.');
     const okMail = setErr('email', /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('email').value.trim()) ? '' : 'Enter a valid email address.');
     if (okName && okMail) {
-      // Static site: connect this to Formspree / Netlify Forms to actually receive messages.
-      document.getElementById('success').classList.add('show');
-      form.reset();
+    const v = id => document.getElementById(id).value.trim();
+    const subject = encodeURIComponent('Website enquiry: ' + v('need'));
+    const body = encodeURIComponent(
+        'Name: ' + v('name') + '\nEmail: ' + v('email') + '\nCompany: ' + v('company') +
+        '\n\n' + v('message'));
+      window.location.href = 'mailto:pwsg@pwsg.com.my?subject=' + subject + '&body=' + body;
     }
   });
 }
