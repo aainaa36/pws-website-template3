@@ -55,7 +55,7 @@ if (form) {
     const body = encodeURIComponent(
         'Name: ' + v('name') + '\nEmail: ' + v('email') + '\nCompany: ' + v('company') +
         '\n\n' + v('message'));
-      window.location.href = 'mailto:pwsg@pwsg.com.my?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:aainaafendy03@gmail.com.my?subject=' + subject + '&body=' + body;
     }
   });
 }
