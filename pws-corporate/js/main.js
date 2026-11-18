@@ -50,12 +50,22 @@ if (form) {
     const okName = setErr('name', document.getElementById('name').value.trim() ? '' : 'Enter your name.');
     const okMail = setErr('email', /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(document.getElementById('email').value.trim()) ? '' : 'Enter a valid email address.');
     if (okName && okMail) {
-    const v = id => document.getElementById(id).value.trim();
-    const subject = encodeURIComponent('Website enquiry: ' + v('need'));
-    const body = encodeURIComponent(
-        'Name: ' + v('name') + '\nEmail: ' + v('email') + '\nCompany: ' + v('company') +
-        '\n\n' + v('message'));
-      window.location.href = 'mailto:aainaafendy03@gmail.com.my?subject=' + subject + '&body=' + body;
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(r => {
+        if (r.ok) {
+          document.getElementById('success').classList.add('show');
+          form.reset();
+        } else {
+          alert('Sorry, something went wrong. Please try again later.');
+        }
+      }).catch(() => {
+        alert('Network error. Please try again.');
+      }).finally(() => { btn.disabled = false; });
     }
   });
 }
